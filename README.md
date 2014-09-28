@@ -5,27 +5,38 @@ Trivial hex-viewer component for rendering binary data streams into something hu
 
 - C & C++ interfaces
 - installable output function
+- thread safe (but not reentrant)
 - dual build system: Makefile & Xcode project
+
 
 ###Usage
 
 ####C interface
 Prints directly to the console by default.
 
+`void hexlog(const char *data, const unsigned long size);`
+
+######Sample
+
     #include "hexlog.h"
 
-    int main(int argc, const char* argv[]) {
+    int main(int argc, const char* argv[]) 
+    {
       const char test[] = "blah foo bar \001 \002 doh shoo na ba fi \003";
       hexlog(test, sizeof(test));
       return 0;
     }
 
-#####C++ interface
-Returns a `std::string`.
+####C++ interface
+Converts the supplied data blob into a hex-view styled `std::string`.
 
+`const std::string hex::log(const char *data, unsigned long size);`
+
+######Sample
     #include "hexlog_plus.hpp"
 
-    int main(int argc, const char* argv[]) {
+    int main(int argc, const char* argv[]) 
+    {
       const char test[] = "blah foo bar \001 \002 doh shoo na ba fi \003";
       cout << hex::log(test, sizeof(test));
       return 0;

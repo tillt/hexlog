@@ -4,10 +4,11 @@
 
 #include <string.h>
 #include <stdarg.h>
+#include <pthread.h>
 
 #include "hexlog.h"
 
-static int (*hexLogPrint)(void *, const char *, ...) = NULL;
+static __thread int (*hexLogPrint)(void *, const char *, ...);
 
 void init_hexlog_(int (*print)(void *, const char *, ...))
 {
@@ -16,6 +17,8 @@ void init_hexlog_(int (*print)(void *, const char *, ...))
 
 void hexlog_(const char *data, const unsigned long size, void *context)
 {
+  static pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
+
   static const int maxBytesPerLine = 16;
 
   char hex[4];
@@ -27,7 +30,11 @@ void hexlog_(const char *data, const unsigned long size, void *context)
   unsigned long int count = 0;
   char buffer[maxBytesPerLine + 2 + 1];
 
-  for (unsigned long int i = 0;i < size;i++) {
+  // Brute force thread safe log output.
+  pthread_mutex_lock(&mutex);
+
+  unsigned long i;
+  for (i = 0;i < size;i++) {
     unsigned char byte = *(data + i);
 
     sprintf(hex, "%02X ", byte);
@@ -57,7 +64,7 @@ void hexlog_(const char *data, const unsigned long size, void *context)
 
   // Incomplete lines need padding.
   if (count > 0) {
-    for (int i=0;i < maxBytesPerLine - count;i++) {
+    for (i=0;i < maxBytesPerLine - count;i++) {
       strcat(line, "   ");
     }
     ascii[count] = 0;
@@ -66,6 +73,8 @@ void hexlog_(const char *data, const unsigned long size, void *context)
 
     hexLogPrint(context, "%s\n", line);
   }
+
+  pthread_mutex_unlock(&mutex);
 }
 
 int printf_wrapper(void *context, const char *format, ...)

@@ -9,7 +9,7 @@
 
 #include <stdio.h>
 #include <stdarg.h>
-#include <alloca.h>
+#include <stdlib.h>
 
 #include "hexlog_int.h"
 

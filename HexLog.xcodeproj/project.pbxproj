@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BB6EE44519D6C34100A4576A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB6EE44419D6C34100A4576A /* main.cpp */; };
+		BB6EE44519D6C34100A4576A /* sample_plus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB6EE44419D6C34100A4576A /* sample_plus.cpp */; };
 		BB6EE45C19D74D4B00A4576A /* hexlog.c in Sources */ = {isa = PBXBuildFile; fileRef = BB6EE44B19D6C39400A4576A /* hexlog.c */; };
 		BB6EE45D19D74D4B00A4576A /* hexlog_plus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB6EE45119D73F9800A4576A /* hexlog_plus.cpp */; };
 		BB6EE46019D74D5D00A4576A /* libhexlog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB6EE45819D74D3600A4576A /* libhexlog.a */; };
@@ -16,10 +16,19 @@
 		BB6EE46419D74F4D00A4576A /* hexlog.h in Headers */ = {isa = PBXBuildFile; fileRef = BB6EE44C19D6C39400A4576A /* hexlog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB6EE46519D74F4D00A4576A /* hexlog_plus.hpp in Headers */ = {isa = PBXBuildFile; fileRef = BB6EE44F19D707EC00A4576A /* hexlog_plus.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB6EE46619D74F5C00A4576A /* hexlog_int.h in Headers */ = {isa = PBXBuildFile; fileRef = BB6EE45319D7407700A4576A /* hexlog_int.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		BB6EE48219D78E4F00A4576A /* libhexlog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB6EE45819D74D3600A4576A /* libhexlog.a */; };
+		BB6EE48319D78E6A00A4576A /* sample.c in Sources */ = {isa = PBXBuildFile; fileRef = BB6EE47619D78D2F00A4576A /* sample.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BB6EE45E19D74D5300A4576A /* PBXContainerItemProxy */ = {
+		BBBBEE3819D7A4EB00CF6963 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB6EE43919D6C34100A4576A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB6EE45719D74D3600A4576A;
+			remoteInfo = hexlog;
+		};
+		BBBBEE3A19D7A4F200CF6963 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BB6EE43919D6C34100A4576A /* Project object */;
 			proxyType = 1;
@@ -49,17 +58,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		BB6EE47919D78E3F00A4576A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		BB6EE44119D6C34100A4576A /* HexLog */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HexLog; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB6EE44419D6C34100A4576A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		BB6EE44119D6C34100A4576A /* hexlog_cpp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = hexlog_cpp; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB6EE44419D6C34100A4576A /* sample_plus.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sample_plus.cpp; sourceTree = "<group>"; };
 		BB6EE44B19D6C39400A4576A /* hexlog.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hexlog.c; sourceTree = "<group>"; };
 		BB6EE44C19D6C39400A4576A /* hexlog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hexlog.h; sourceTree = "<group>"; };
 		BB6EE44F19D707EC00A4576A /* hexlog_plus.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = hexlog_plus.hpp; sourceTree = "<group>"; };
 		BB6EE45119D73F9800A4576A /* hexlog_plus.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hexlog_plus.cpp; sourceTree = "<group>"; };
 		BB6EE45319D7407700A4576A /* hexlog_int.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = hexlog_int.h; sourceTree = "<group>"; };
 		BB6EE45819D74D3600A4576A /* libhexlog.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libhexlog.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB6EE47619D78D2F00A4576A /* sample.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sample.c; sourceTree = "<group>"; };
+		BB6EE47B19D78E3F00A4576A /* hexlog_c */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = hexlog_c; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBF15B8819D7A54C00FBB7F3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,13 +99,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BB6EE47819D78E3F00A4576A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB6EE48219D78E4F00A4576A /* libhexlog.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		BB6EE43819D6C34100A4576A = {
 			isa = PBXGroup;
 			children = (
-				BB6EE44319D6C34100A4576A /* HexLog */,
+				BBF15B8719D7A53C00FBB7F3 /* Documentation */,
+				BB6EE48619D78EC000A4576A /* Samples */,
+				BB6EE48519D78EA900A4576A /* C++ */,
+				BB6EE48419D78E9300A4576A /* C */,
 				BB6EE44219D6C34100A4576A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,23 +124,58 @@
 		BB6EE44219D6C34100A4576A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BB6EE44119D6C34100A4576A /* HexLog */,
+				BB6EE44119D6C34100A4576A /* hexlog_cpp */,
 				BB6EE45819D74D3600A4576A /* libhexlog.a */,
+				BB6EE47B19D78E3F00A4576A /* hexlog_c */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BB6EE44319D6C34100A4576A /* HexLog */ = {
+		BB6EE48419D78E9300A4576A /* C */ = {
 			isa = PBXGroup;
 			children = (
-				BB6EE44419D6C34100A4576A /* main.cpp */,
+				BB6EE48719D78EDA00A4576A /* private */,
 				BB6EE44B19D6C39400A4576A /* hexlog.c */,
 				BB6EE44C19D6C39400A4576A /* hexlog.h */,
+			);
+			name = C;
+			path = HexLog;
+			sourceTree = "<group>";
+		};
+		BB6EE48519D78EA900A4576A /* C++ */ = {
+			isa = PBXGroup;
+			children = (
 				BB6EE44F19D707EC00A4576A /* hexlog_plus.hpp */,
 				BB6EE45119D73F9800A4576A /* hexlog_plus.cpp */,
+			);
+			name = "C++";
+			path = HexLog;
+			sourceTree = "<group>";
+		};
+		BB6EE48619D78EC000A4576A /* Samples */ = {
+			isa = PBXGroup;
+			children = (
+				BB6EE44419D6C34100A4576A /* sample_plus.cpp */,
+				BB6EE47619D78D2F00A4576A /* sample.c */,
+			);
+			name = Samples;
+			path = HexLog;
+			sourceTree = "<group>";
+		};
+		BB6EE48719D78EDA00A4576A /* private */ = {
+			isa = PBXGroup;
+			children = (
 				BB6EE45319D7407700A4576A /* hexlog_int.h */,
 			);
-			path = HexLog;
+			name = private;
+			sourceTree = "<group>";
+		};
+		BBF15B8719D7A53C00FBB7F3 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				BBF15B8819D7A54C00FBB7F3 /* README.md */,
+			);
+			name = Documentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,9 +194,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		BB6EE44019D6C34100A4576A /* HexLog */ = {
+		BB6EE44019D6C34100A4576A /* hexlog_cpp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BB6EE44819D6C34100A4576A /* Build configuration list for PBXNativeTarget "HexLog" */;
+			buildConfigurationList = BB6EE44819D6C34100A4576A /* Build configuration list for PBXNativeTarget "hexlog_cpp" */;
 			buildPhases = (
 				BB6EE43D19D6C34100A4576A /* Sources */,
 				BB6EE43E19D6C34100A4576A /* Frameworks */,
@@ -138,11 +205,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				BB6EE45F19D74D5300A4576A /* PBXTargetDependency */,
+				BBBBEE3B19D7A4F200CF6963 /* PBXTargetDependency */,
 			);
-			name = HexLog;
+			name = hexlog_cpp;
 			productName = HexLog;
-			productReference = BB6EE44119D6C34100A4576A /* HexLog */;
+			productReference = BB6EE44119D6C34100A4576A /* hexlog_cpp */;
 			productType = "com.apple.product-type.tool";
 		};
 		BB6EE45719D74D3600A4576A /* hexlog */ = {
@@ -163,6 +230,24 @@
 			productReference = BB6EE45819D74D3600A4576A /* libhexlog.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		BB6EE47A19D78E3F00A4576A /* hexlog_c */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB6EE47F19D78E3F00A4576A /* Build configuration list for PBXNativeTarget "hexlog_c" */;
+			buildPhases = (
+				BB6EE47719D78E3F00A4576A /* Sources */,
+				BB6EE47819D78E3F00A4576A /* Frameworks */,
+				BB6EE47919D78E3F00A4576A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BBBBEE3919D7A4EB00CF6963 /* PBXTargetDependency */,
+			);
+			name = hexlog_c;
+			productName = hexlog_c;
+			productReference = BB6EE47B19D78E3F00A4576A /* hexlog_c */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -176,6 +261,9 @@
 						CreatedOnToolsVersion = 6.1;
 					};
 					BB6EE45719D74D3600A4576A = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					BB6EE47A19D78E3F00A4576A = {
 						CreatedOnToolsVersion = 6.1;
 					};
 				};
@@ -192,8 +280,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BB6EE44019D6C34100A4576A /* HexLog */,
 				BB6EE45719D74D3600A4576A /* hexlog */,
+				BB6EE47A19D78E3F00A4576A /* hexlog_c */,
+				BB6EE44019D6C34100A4576A /* hexlog_cpp */,
 			);
 		};
 /* End PBXProject section */
@@ -203,7 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB6EE44519D6C34100A4576A /* main.cpp in Sources */,
+				BB6EE44519D6C34100A4576A /* sample_plus.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,13 +305,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BB6EE47719D78E3F00A4576A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB6EE48319D78E6A00A4576A /* sample.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BB6EE45F19D74D5300A4576A /* PBXTargetDependency */ = {
+		BBBBEE3919D7A4EB00CF6963 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BB6EE45719D74D3600A4576A /* hexlog */;
-			targetProxy = BB6EE45E19D74D5300A4576A /* PBXContainerItemProxy */;
+			targetProxy = BBBBEE3819D7A4EB00CF6963 /* PBXContainerItemProxy */;
+		};
+		BBBBEE3B19D7A4F200CF6963 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB6EE45719D74D3600A4576A /* hexlog */;
+			targetProxy = BBBBEE3A19D7A4F200CF6963 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -335,6 +437,24 @@
 			};
 			name = Release;
 		};
+		BB6EE48019D78E3F00A4576A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BB6EE48119D78E3F00A4576A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -347,13 +467,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BB6EE44819D6C34100A4576A /* Build configuration list for PBXNativeTarget "HexLog" */ = {
+		BB6EE44819D6C34100A4576A /* Build configuration list for PBXNativeTarget "hexlog_cpp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BB6EE44919D6C34100A4576A /* Debug */,
 				BB6EE44A19D6C34100A4576A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BB6EE45919D74D3600A4576A /* Build configuration list for PBXNativeTarget "hexlog" */ = {
 			isa = XCConfigurationList;
@@ -362,6 +483,16 @@
 				BB6EE45B19D74D3600A4576A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB6EE47F19D78E3F00A4576A /* Build configuration list for PBXNativeTarget "hexlog_c" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB6EE48019D78E3F00A4576A /* Debug */,
+				BB6EE48119D78E3F00A4576A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

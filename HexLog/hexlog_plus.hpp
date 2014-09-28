@@ -1,5 +1,5 @@
 //
-//  hexlog_plus.h
+//  hexlog_plus.hpp
 //
 
 #ifndef __HexLog__hexlog_plus__
