@@ -38,14 +38,11 @@ namespace hex
       va_list argptr;
       char* ptr;
       va_start(argptr, format);
-      vasprintf(&ptr, format, argptr);
+      int ret = vasprintf(&ptr, format, argptr);
       va_end(argptr);
-      std::string str(ptr);
+      l->stream << std::string(ptr);
       free(ptr);
-
-      l->stream << str;
-
-      return (int)str.length();
+      return ret;
     }
   }
 
